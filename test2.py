@@ -1,7 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf
-from tensorflow.python.keras import layers, models
+from tensorflow.keras import layers, models
 from sklearn.model_selection import train_test_split
 
 # Step 1: Load and Preprocess Data

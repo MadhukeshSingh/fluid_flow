@@ -1,4 +1,6 @@
 import cv2
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.python.keras.models import Sequential
@@ -7,7 +9,7 @@ from sklearn.model_selection import train_test_split
 
 
 # Load the image
-image_path = 'data/Picture1.png'
+image_path = 'images/test1.png'
 image = cv2.imread(image_path)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
